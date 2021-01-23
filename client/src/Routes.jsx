@@ -1,12 +1,12 @@
-import React from "react";
+import React, { lazy } from "react";
 import { Switch, Route } from "react-router-dom";
 
 const loading = () => (
   <div className="animated fadeIn pt-3 text-center">Loading...</div>
 );
 
-const Home = React.lazy(() => import("./containers/Home"));
-const NotFound = React.lazy(() => import("./components/NotFound"));
+const Home = lazy(() => import("./pages/Home"));
+const NotFound = lazy(() => import("./components/NotFound"));
 
 function Routes() {
   return (
