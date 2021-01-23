@@ -1,6 +1,6 @@
 /* eslint-disable linebreak-style */
-import Todo from '../models/todoModel';
-import logger from '../helpers/logger';
+import Todo from "../models/todoModel";
+import logger from "../helpers/logger";
 
 export const create = async (req, res) => {
   try {
@@ -40,7 +40,7 @@ export const update = async (req, res) => {
     const updatedTodo = await Todo.findOneAndUpdate(
       { _id: req.params.id },
       req.body,
-      { new: true },
+      { new: true }
     );
     res.status(200).json(updatedTodo);
   } catch (error) {
