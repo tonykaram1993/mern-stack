@@ -15,6 +15,7 @@ function NotFound() {
                 The page you are looking for was not found.
               </p>
             </div>
+
             <Button color="info" tag={Link} to="/">
               Back to Home
             </Button>
