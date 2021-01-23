@@ -1,4 +1,6 @@
-import React from 'react';
+import React from "react";
+
+var myval = 1 / 0;
 
 const func = x => x + 1;
 
