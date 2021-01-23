@@ -1,0 +1,32 @@
+version: '3.1'
+services:
+  server:
+    container_name: app-server
+    build: ./server
+    ports:
+      - '8000:8000'
+    links:
+      - mongo
+    volumes:
+      - ./server:/usr/src/server
+    depends_on:
+      - mongo
+    tty: true
+  client:
+    container_name: app-client
+    build: ./client
+    volumes:
+      - ./client/src:/usr/src/client/src
+      - ./client/public:/usr/src/client/public
+    links:
+      - server
+    ports:
+      - '3000:3000'
+    depends_on:
+      - server
+    tty: true
+  mongo:
+    container_name: mongo
+    image: mongo
+    ports:
+      - 27018:27018

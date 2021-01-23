@@ -1,0 +1,9 @@
+{
+  "editor.formatOnSave": true,
+  "workbench.colorCustomizations": {
+    "scrollbarSlider.background": "#ffffff11",
+    "activityBar.background": "#5F0427",
+    "titleBar.activeBackground": "#860537",
+    "titleBar.activeForeground": "#FFFBFD"
+  }
+}
