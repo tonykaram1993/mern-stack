@@ -1,25 +1,25 @@
-import { createLogger, format, transports } from 'winston';
-import path from 'path';
+import { createLogger, format, transports } from "winston";
+import path from "path";
 
 const formatTime = () => {
   const date = new Date();
 
   let hour = date.getHours();
-  hour = (hour < 10 ? '0' : '') + hour;
+  hour = (hour < 10 ? "0" : "") + hour;
 
   let min = date.getMinutes();
-  min = (min < 10 ? '0' : '') + min;
+  min = (min < 10 ? "0" : "") + min;
 
   let sec = date.getSeconds();
-  sec = (sec < 10 ? '0' : '') + sec;
+  sec = (sec < 10 ? "0" : "") + sec;
 
   const year = date.getFullYear();
 
   let month = date.getMonth() + 1;
-  month = (month < 10 ? '0' : '') + month;
+  month = (month < 10 ? "0" : "") + month;
 
   let day = date.getDate();
-  day = (day < 10 ? '0' : '') + day;
+  day = (day < 10 ? "0" : "") + day;
 
   const millisecond = date.getMilliseconds();
 
@@ -28,7 +28,7 @@ const formatTime = () => {
 
 const customFormat = format.printf(
   ({ level, message }) =>
-    `[${formatTime()}] ${level.toLocaleUpperCase()} ${message}`,
+    `[${formatTime()}] ${level.toLocaleUpperCase()} ${message}`
 );
 
 const logger = createLogger({
@@ -37,14 +37,14 @@ const logger = createLogger({
   colorize: true,
 });
 
-if (process.env.NODE_ENV !== 'production') {
+if (process.env.NODE_ENV !== "production") {
   logger.add(new transports.Console({}));
 } else {
   logger.add(
     new transports.File({
-      filename: path.resolve(__dirname, '../', 'storage/logs', 'output.log'),
+      filename: path.resolve(__dirname, "../", "storage/logs", "output.log"),
       maxsize: 10240,
-    }),
+    })
   );
 }
 

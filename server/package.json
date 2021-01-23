@@ -1,17 +1,13 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "description": "Server side for MERN Stack Starter",
+  "description": "ExpressJS Server",
   "main": "server.js",
   "scripts": {
     "dev": "nodemon --exec babel-node server.js",
     "build": "babel -d build server"
   },
-  "keywords": [
-    "mern-stack-stater",
-    "mern-stack-boilerplate"
-  ],
-  "author": "Le Hong Thai",
+  "author": "Tony Karam",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.19.2",
@@ -33,12 +29,6 @@
     "@babel/preset-env": "^7.8.4",
     "@babel/runtime": "^7.8.4",
     "babel-register": "^6.26.0",
-    "eslint": "^6.8.0",
-    "eslint-config-airbnb-base": "^14.0.0",
-    "eslint-config-prettier": "^6.10.0",
-    "eslint-plugin-import": "^2.20.1",
-    "eslint-plugin-prettier": "^3.1.2",
     "nodemon": "^2.0.7",
-    "prettier": "^1.19.1"
   }
 }
