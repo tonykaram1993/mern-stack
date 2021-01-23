@@ -29,6 +29,6 @@
     "@babel/preset-env": "^7.8.4",
     "@babel/runtime": "^7.8.4",
     "babel-register": "^6.26.0",
-    "nodemon": "^2.0.7",
+    "nodemon": "^2.0.7"
   }
 }
